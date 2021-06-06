@@ -23,7 +23,7 @@ public class PagamentoResouce {
 	public ResponseEntity<PagamentoEntity> pagamentoColaborador(@PathVariable Long idColaborador,
 			                                                    @PathVariable BigDecimal diasTrabalhados) {
 
-		PagamentoEntity infosPagamento = pagamentoService.getPagamento(idColaborador, diasTrabalhados);
+		PagamentoEntity infosPagamento = pagamentoService.getPagamentoFeingClient(idColaborador, diasTrabalhados);
 
 		return ResponseEntity.ok(infosPagamento);
 	}

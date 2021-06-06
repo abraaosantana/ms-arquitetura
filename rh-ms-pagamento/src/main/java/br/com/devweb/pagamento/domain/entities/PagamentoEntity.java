@@ -2,6 +2,7 @@ package br.com.devweb.pagamento.domain.entities;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class PagamentoEntity implements Serializable {
 
@@ -47,7 +48,7 @@ public class PagamentoEntity implements Serializable {
 	}
 
 	public BigDecimal getRendaTotal() {
-		return rendaDiaria.multiply(quantidadeDias);
+		return rendaDiaria.multiply(quantidadeDias).setScale(2, RoundingMode.HALF_UP);
 	}
 
 }

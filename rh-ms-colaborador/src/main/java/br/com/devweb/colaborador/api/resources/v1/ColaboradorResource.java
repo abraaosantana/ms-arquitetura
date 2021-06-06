@@ -25,9 +25,9 @@ public class ColaboradorResource {
 		return ResponseEntity.ok(colaboradores);
 	}
 	
-	@GetMapping(value = "/{id}")
-	public ResponseEntity<ColaboradorEntity> buscarColaborador(@PathVariable Long id) {
-		ColaboradorEntity colaborador = colaboradorService.buscarPorId(id).get(); 
+	@GetMapping(value = "/{idColaborador}")
+	public ResponseEntity<ColaboradorEntity> buscarColaborador(@PathVariable Long idColaborador) {
+		ColaboradorEntity colaborador = colaboradorService.buscarPorId(idColaborador).get(); 
 		return ResponseEntity.ok(colaborador);
 	}
 
