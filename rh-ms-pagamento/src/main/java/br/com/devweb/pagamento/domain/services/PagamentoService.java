@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import br.com.devweb.pagamento.core.FeignClient.ColaboradorFeingClient;
 import br.com.devweb.pagamento.domain.entities.ColaboradorEntity;
 import br.com.devweb.pagamento.domain.entities.PagamentoEntity;
 
@@ -19,21 +20,31 @@ public class PagamentoService {
 	private String colaboradorHost;
 
 	@Autowired
-	private RestTemplate restTemplate;
+	private RestTemplate colaboradorRestTemplate;
+	
+	@Autowired
+	private ColaboradorFeingClient colaboradorFeingClient;
 
 	private static final String PATH_COLABORADOR = "/v1/colaboradores/{idColaborador}";
 
-	public PagamentoEntity getPagamento(Long idColaborador, BigDecimal diasTrabalhados) {
-
+	public PagamentoEntity getPagamentoRestTemplate(Long idColaborador, BigDecimal diasTrabalhados) {
+		
 		Map<String, String> uriVariaveis = new HashMap<>();
 		uriVariaveis.put("idColaborador", idColaborador.toString());
-
+		
 		String url = String.join("", colaboradorHost, PATH_COLABORADOR);
-
-		ColaboradorEntity colaborador = restTemplate.getForObject(url, ColaboradorEntity.class, uriVariaveis);
-
+		ColaboradorEntity colaborador = colaboradorRestTemplate.getForObject(url, ColaboradorEntity.class, uriVariaveis);
+		
 		return new PagamentoEntity(colaborador.getNome(), colaborador.getRendaDiaria(), diasTrabalhados);
-
+		
+	}
+	
+	public PagamentoEntity getPagamentoFeingClient(Long idColaborador, BigDecimal diasTrabalhados) {
+		
+		ColaboradorEntity colaborador = colaboradorFeingClient.buscarColaboradorPorId(idColaborador).getBody();
+		
+		return new PagamentoEntity(colaborador.getNome(), colaborador.getRendaDiaria(), diasTrabalhados);
+		
 	}
 
 }
