@@ -16,7 +16,7 @@ import br.com.devweb.pagamento.domain.entities.PagamentoEntity;
 @Service
 public class PagamentoService {
 
-	@Value(value = "${rh-ms.colaborador.host}")
+	@Value(value = "${rh-ms-colaborador.host}")
 	private String colaboradorHost;
 
 	@Autowired

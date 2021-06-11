@@ -34,7 +34,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8001/v1/colaboradores/5",
+							"raw": "http://localhost:8001/v1/colaboradores/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -43,7 +43,7 @@
 							"path": [
 								"v1",
 								"colaboradores",
-								"5"
+								"1"
 							]
 						}
 					},
@@ -60,7 +60,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8101/v1/pagamentos/1/dias/10",
+							"raw": "http://localhost:8101/v1/pagamentos/1/dias/0.1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -71,7 +71,7 @@
 								"pagamentos",
 								"1",
 								"dias",
-								"10"
+								"0.1"
 							]
 						}
 					},

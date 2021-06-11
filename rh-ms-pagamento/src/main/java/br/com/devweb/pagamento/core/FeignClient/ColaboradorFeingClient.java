@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import br.com.devweb.pagamento.domain.entities.ColaboradorEntity;
 
-@FeignClient(name = "rh-ms-colaborador", url = "localhost:8001", path = "/v1/colaboradores")
+
 @Component
+@FeignClient(name = "rh-ms-colaborador", url = "localhost:8001", path = "/v1/colaboradores")
 public interface ColaboradorFeingClient {
 
 	@GetMapping(value = "/{idColaborador}")
