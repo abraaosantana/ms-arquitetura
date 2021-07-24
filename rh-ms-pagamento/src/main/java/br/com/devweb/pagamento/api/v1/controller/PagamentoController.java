@@ -14,7 +14,7 @@ import br.com.devweb.pagamento.domain.service.PagamentoService;
 
 @RestController
 @RequestMapping(value = "/v1/pagamentos")
-public class PagamentoResouce {
+public class PagamentoController {
 
 	@Autowired
 	private PagamentoService pagamentoService;
