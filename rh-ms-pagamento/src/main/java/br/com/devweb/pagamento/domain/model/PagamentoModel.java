@@ -1,10 +1,10 @@
-package br.com.devweb.pagamento.domain.entities;
+package br.com.devweb.pagamento.domain.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class PagamentoEntity implements Serializable {
+public class PagamentoModel implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -12,11 +12,11 @@ public class PagamentoEntity implements Serializable {
 	private BigDecimal rendaDiaria;
 	private BigDecimal quantidadeDias;
 
-	public PagamentoEntity() {
+	public PagamentoModel() {
 
 	}
 
-	public PagamentoEntity(String nome, BigDecimal rendaDiaria, BigDecimal quantidadeDias) {
+	public PagamentoModel(String nome, BigDecimal rendaDiaria, BigDecimal quantidadeDias) {
 		super();
 		this.nome = nome;
 		this.rendaDiaria = rendaDiaria;

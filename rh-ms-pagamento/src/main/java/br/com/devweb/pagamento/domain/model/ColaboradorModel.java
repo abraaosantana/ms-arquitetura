@@ -1,9 +1,9 @@
-package br.com.devweb.pagamento.domain.entities;
+package br.com.devweb.pagamento.domain.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class ColaboradorEntity implements Serializable {
+public class ColaboradorModel implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -12,10 +12,10 @@ public class ColaboradorEntity implements Serializable {
 	private BigDecimal rendaDiaria;
 	private BigDecimal rendaBruta;
 
-	public ColaboradorEntity() {
+	public ColaboradorModel() {
 	}
 
-	public ColaboradorEntity(Long id, String nome, BigDecimal rendaDiaria, BigDecimal rendaBruta) {
+	public ColaboradorModel(Long id, String nome, BigDecimal rendaDiaria, BigDecimal rendaBruta) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -77,7 +77,7 @@ public class ColaboradorEntity implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ColaboradorEntity other = (ColaboradorEntity) obj;
+		ColaboradorModel other = (ColaboradorModel) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

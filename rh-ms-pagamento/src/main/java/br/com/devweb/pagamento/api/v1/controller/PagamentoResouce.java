@@ -1,4 +1,4 @@
-package br.com.devweb.pagamento.api.resources.v1;
+package br.com.devweb.pagamento.api.v1.controller;
 
 import java.math.BigDecimal;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.devweb.pagamento.domain.entities.PagamentoEntity;
-import br.com.devweb.pagamento.domain.services.PagamentoService;
+import br.com.devweb.pagamento.domain.model.PagamentoModel;
+import br.com.devweb.pagamento.domain.service.PagamentoService;
 
 @RestController
 @RequestMapping(value = "/v1/pagamentos")
@@ -20,10 +20,10 @@ public class PagamentoResouce {
 	private PagamentoService pagamentoService;
 
 	@GetMapping(value = "/{idColaborador}/dias/{diasTrabalhados}")
-	public ResponseEntity<PagamentoEntity> pagamentoColaborador(@PathVariable Long idColaborador,
+	public ResponseEntity<PagamentoModel> pagamentoColaborador(@PathVariable Long idColaborador,
 			                                                    @PathVariable BigDecimal diasTrabalhados) {
 
-		PagamentoEntity infosPagamento = pagamentoService.getPagamentoFeingClient(idColaborador, diasTrabalhados);
+		PagamentoModel infosPagamento = pagamentoService.getPagamentoFeingClient(idColaborador, diasTrabalhados);
 
 		return ResponseEntity.ok(infosPagamento);
 	}

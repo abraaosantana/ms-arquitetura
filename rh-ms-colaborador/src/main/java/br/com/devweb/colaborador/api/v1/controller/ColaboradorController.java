@@ -1,4 +1,4 @@
-package br.com.devweb.colaborador.api.resources.v1;
+package br.com.devweb.colaborador.api.v1.controller;
 
 import java.util.List;
 
@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.devweb.colaborador.domain.entities.ColaboradorEntity;
-import br.com.devweb.colaborador.domain.services.ColaboradorService;
+import br.com.devweb.colaborador.domain.entity.ColaboradorEntity;
+import br.com.devweb.colaborador.domain.service.ColaboradorService;
 
 @RestController
 @RequestMapping(value = "/v1/colaboradores")
-public class ColaboradorResource {
+public class ColaboradorController {
 	
-	private static Logger LOG = LoggerFactory.getLogger(ColaboradorResource.class);
+	private static Logger LOG = LoggerFactory.getLogger(ColaboradorController.class);
 	
 	@Autowired
 	private Environment env;

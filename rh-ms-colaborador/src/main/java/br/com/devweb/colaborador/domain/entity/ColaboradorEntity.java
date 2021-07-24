@@ -1,4 +1,4 @@
-package br.com.devweb.colaborador.domain.entities;
+package br.com.devweb.colaborador.domain.entity;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -20,16 +20,16 @@ public class ColaboradorEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "GEN_SEQ_COLABORADOR")
 	@SequenceGenerator(name = "GEN_SEQ_COLABORADOR", sequenceName = "SEQ_COLABORADOR", initialValue = 1, allocationSize = 1)
-	@Column(name = "ID_COLABORADOR", nullable = false, unique = true)
+	@Column(name = "ID_COLABORADOR", unique = true, nullable = false)
 	private Long id;
 	
-	@Column(name = "NOME", nullable = false)
+	@Column(name = "NM_COLABORADOR", nullable = false)
 	private String nome;
 	
-	@Column(name = "RENDA_DIARIA", precision = 7, scale = 2, nullable = false)
+	@Column(name = "VL_RENDA_DIARIA", precision = 7, scale = 2, nullable = false)
 	private BigDecimal rendaDiaria;
 	
-	@Column(name = "RENDA_Bruta", precision = 7, scale = 2, nullable = false)
+	@Column(name = "VL_RENDA_BRUTA", precision = 7, scale = 2, nullable = false)
 	private BigDecimal rendaBruta;
 
 	public ColaboradorEntity() {
