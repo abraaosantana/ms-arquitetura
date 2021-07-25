@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import br.com.devweb.pagamento.domain.model.ColaboradorModel;
 
 @Component
-@FeignClient(name = "rh-ms-colaborador", path = "/rh-ms-colaborador/v1/colaboradores")
+@FeignClient(name = "rh-ms-colaborador", path = "/v1/colaboradores")
 public interface ColaboradorFeingClient {
 
 	@GetMapping(value = "/{idColaborador}")
