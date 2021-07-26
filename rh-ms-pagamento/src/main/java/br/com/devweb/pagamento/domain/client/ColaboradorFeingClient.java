@@ -13,6 +13,6 @@ import br.com.devweb.pagamento.domain.model.ColaboradorModel;
 public interface ColaboradorFeingClient {
 
 	@GetMapping(value = "/{idColaborador}")
-	ResponseEntity<ColaboradorModel> buscarColaboradorPorId(@PathVariable Long idColaborador);
+	ResponseEntity<ColaboradorModel> buscarColaboradorPorId(@PathVariable("idColaborador") Long idColaborador);
 
 }
