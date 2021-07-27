@@ -15,11 +15,11 @@ import javax.persistence.Table;
 @Table(name = "RH_COLABORADOR")
 public class ColaboradorEntity implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -1237463722898366660L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "GEN_SEQ_COLABORADOR")
-	@SequenceGenerator(name = "GEN_SEQ_COLABORADOR", sequenceName = "SEQ_COLABORADOR", initialValue = 1, allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "GEN_SEQ_RH_COLABORADOR")
+	@SequenceGenerator(name = "GEN_SEQ_RH_COLABORADOR", sequenceName = "SEQ_RH_COLABORADOR", initialValue = 1, allocationSize = 1)
 	@Column(name = "ID_COLABORADOR", unique = true, nullable = false)
 	private Long id;
 	
