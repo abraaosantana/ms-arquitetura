@@ -1,4 +1,4 @@
-package br.com.devweb.user.domain.entity;
+package br.com.devweb.usuario.domain.entity;
 
 import java.io.Serializable;
 

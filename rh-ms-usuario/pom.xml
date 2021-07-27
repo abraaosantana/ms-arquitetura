@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.devweb</groupId>
-	<artifactId>rh-ms-user</artifactId>
+	<artifactId>rh-ms-usuario</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>rh-ms-user</name>
 	<description>Serviço de cadastro de usuários</description>

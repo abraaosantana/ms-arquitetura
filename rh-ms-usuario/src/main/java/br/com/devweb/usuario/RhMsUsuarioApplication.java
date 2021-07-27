@@ -1,4 +1,4 @@
-package br.com.devweb.user;
+package br.com.devweb.usuario;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,15 +11,15 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @EnableEurekaClient
 @SpringBootApplication
-public class RhMsUserApplication implements CommandLineRunner{
+public class RhMsUsuarioApplication implements CommandLineRunner{
 	
-	private static Logger LOG = LoggerFactory.getLogger(RhMsUserApplication.class);
+	private static Logger LOG = LoggerFactory.getLogger(RhMsUsuarioApplication.class);
 
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoderBCrypt;
 	
 	public static void main(String[] args) {
-		SpringApplication.run(RhMsUserApplication.class, args);
+		SpringApplication.run(RhMsUsuarioApplication.class, args);
 	}
 
 	@Override

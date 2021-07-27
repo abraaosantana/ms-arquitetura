@@ -1,10 +1,10 @@
-package br.com.devweb.rhuser;
+package br.com.devweb.usuario;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RhMsUserApplicationTests {
+class RhMsUsuarioApplicationTests {
 
 	@Test
 	void contextLoads() {

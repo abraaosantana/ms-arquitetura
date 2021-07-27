@@ -1,3 +1,3 @@
-INSERT INTO rh_colaborador (id_colaborador, nm_colaborador, vl_renda_diaria, vl_renda_bruta) VALUES (SEQ_COLABORADOR.NEXTVAL, 'Jo√£o', 200.000001, 8500.00);
+INSERT INTO rh_colaborador (id_colaborador, nm_colaborador, vl_renda_diaria, vl_renda_bruta) VALUES (SEQ_COLABORADOR.NEXTVAL, 'Jo„o', 200.000001, 8500.00);
 INSERT INTO rh_colaborador (id_colaborador, nm_colaborador, vl_renda_diaria, vl_renda_bruta) VALUES (SEQ_COLABORADOR.NEXTVAL, 'Maria', 300.00, 4853.00800025);
 INSERT INTO rh_colaborador (id_colaborador, nm_colaborador, vl_renda_diaria, vl_renda_bruta) VALUES (SEQ_COLABORADOR.NEXTVAL, 'Paulo', 250.00, 1092.00);

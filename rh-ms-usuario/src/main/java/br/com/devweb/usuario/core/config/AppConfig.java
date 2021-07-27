@@ -1,4 +1,4 @@
-package br.com.devweb.user.core.config;
+package br.com.devweb.usuario.core.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
