@@ -20,7 +20,7 @@ public class UsuarioController {
 	@GetMapping(value = "/pesquisa")
 	public ResponseEntity<UsuarioModel> buscarUsuarioPorEmail(@RequestParam String email) {
 		try {
-			UsuarioModel usuario = usuarioService.buscarPorEmail(email);
+			UsuarioModel usuario = (UsuarioModel) usuarioService.loadUserByUsername(email);
 			return ResponseEntity.ok(usuario);
 		} catch (Exception e) {
 			return ResponseEntity.notFound().build();
