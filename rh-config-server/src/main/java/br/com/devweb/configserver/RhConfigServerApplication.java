@@ -1,5 +1,6 @@
 package br.com.devweb.configserver;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class RhConfigServerApplication implements CommandLineRunner {
 		String username = env.getProperty("spring.cloud.config.server.git.username");
 		String password = env.getProperty("spring.cloud.config.server.git.password");
 		
-		if (!username.isBlank() || !password.isBlank()) {
+		if (StringUtils.isNotBlank(username) && StringUtils.isNotBlank(password)) {
 			LOG.info("GITHUB_USER: {} GITHUB_PASS: {}", username, password);
 		} else {
 			LOG.info("Configurar variáveis de ambiente: GITHUB_USER e GITHUB_PASS");
