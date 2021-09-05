@@ -1,5 +1,6 @@
 package br.com.devweb.usuario.api.v1.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -31,6 +32,15 @@ public class UsuarioController {
 	@GetMapping(value = "/configs")
 	public ResponseEntity<String> buscarConfigs() {
 		return ResponseEntity.ok(env.getProperty("test.config"));
+	}
+	
+	@GetMapping
+	public ResponseEntity<List<UsuarioEntity>> buscarUsuarios() {
+		List<UsuarioEntity> usuarios = usuarioService.buscarUsuarios();
+		if (usuarios == null || usuarios.isEmpty()) {
+			return ResponseEntity.badRequest().build();
+		}
+		return ResponseEntity.ok(usuarios);
 	}
 
 	@GetMapping(value = "/{idUsuario}")
